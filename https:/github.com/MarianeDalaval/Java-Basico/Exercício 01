@@ -1,0 +1,72 @@
+package exercicio_01;
+
+import java.util.Scanner;
+
+public class Exercicio_01 {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double pesonaterra;
+        double resultado;
+        int planeta;
+		String planeta;
+
+        System.out.println("Calcular o Seu Peso em Determinado Planeta");
+        System.out.println();
+
+//entrada de dados
+        System.out.print("Digite o seu peso na Terra em Kg: ");
+        pesonaterra = teclado.nextDouble();
+        System.out.println("# 	Gravidade 	Planeta");
+        System.out.println("1 	0,37 		Mercurio");
+        System.out.println("2 	0,88 		Venus");
+        System.out.println("3 	0,38 		Marte");
+        System.out.println("4 	2,64 		Jupiter");
+        System.out.println("5 	1,15 		Saturno");
+        System.out.println("6 	1,17 		Urano");
+        System.out.println("Escolha o número do Planeta: ");
+        planeta = teclado.nextInt();
+
+//processamento
+        resultado = 0;
+		planeta = "";
+        
+        switch (planeta) {
+            case 1: {
+                resultado = pesonaterra / 10 * 0.37; break; 
+				planeta = "Mercúrio"; }
+
+            case 2: {
+                resultado = pesonaterra / 10 * 0.88; 
+				planeta = "Vênus"; break; }
+
+            case 3: {
+                resultado = pesonaterra / 10 * 0.38;
+				planeta = "Marte";
+				break; }
+
+            case 4: {
+                resultado = pesonaterra / 10 * 2.64;
+				planeta = "Júpiter";
+				 break;}
+				
+            case 5: {
+                resultado = pesonaterra / 10 * 1.15;
+				planeta = "Saturno";
+				break;}
+
+            case 6: {
+                resultado = pesonaterra / 10 * 1.17;
+				planeta = "Urano";
+				break;}
+        
+
+        default : {System.out.println ("Número do planeta Inválido");}}
+
+//saída de dados
+       if (resultado !=0){
+        System.out.println();
+        System.out.println("Seu peso no planeta Terra: " +pesonaterra);
+		System.out.println("Peso no planeta " + planeta.toUpperCase() + " = " +resultado);
+		
+}}}
