@@ -1,0 +1,32 @@
+package exercicio_05;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Exercicio_05 {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("###.00");
+        
+        double salario;
+        double prestacao;
+        double percentual;
+
+        System.out.println("Verifica se o empréstimo poderá ou não ser concedido");
+        System.out.println();
+
+        System.out.print("Digite o valor do salário bruto em R$: ");
+        salario = teclado.nextDouble();
+
+        System.out.print("Digite o valor da prestação em R$: ");
+        prestacao = teclado.nextDouble();
+
+        percentual = prestacao * 100 / salario;
+        if (percentual > 30.0) {
+            System.out.println("Não é possível conceder o empréstimo! " + df.format (percentual) + "%");
+        } else {
+            System.out.println("É possível conceder o emprés100timo! " + df.format (percentual) + "%");
+        }
+    }
+}
