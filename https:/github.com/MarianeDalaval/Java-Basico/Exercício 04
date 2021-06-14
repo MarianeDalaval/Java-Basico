@@ -1,0 +1,30 @@
+package exercicio_04.pkg1;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio_04 {
+
+public static void main(String[] args) {
+Scanner teclado = new Scanner (System.in);
+DecimalFormat df = new DecimalFormat("#,##0.00");
+ //Declarar Variáveis
+        double num;
+        double resultado;
+        
+        //Função do programa
+        System.out.println("Exibir a terça parte de um número real");
+        System.out.println();
+                
+        //Entrada de Dados
+        System.out.print("Digite um número real: ");
+        num = teclado.nextDouble();
+        
+        //Processamento
+        resultado = num / 3;
+        
+        //Saída de Dados
+        System.out.println("A terça parte do número: " + num + " é: "+ df.format(resultado));
+    
+    }
+    
+}
