@@ -1,0 +1,63 @@
+package exercicio_02;
+
+import java.util.Scanner;
+
+public class Exercicio_02 {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double num1;
+        double num2;
+        double resultado;
+        char operacao;
+
+        System.out.println("Calculadora de 4 operações: [+-*/]");
+        System.out.println();
+
+//Entrada de Dados
+        System.out.println("Digite o primeiro número: ");
+        num1 = teclado.nextDouble();
+        System.out.println("Escolha a operação desejada [+-*/]: ");
+        operacao = teclado.next().charAt(0);
+        System.out.println("Digite o segundo número: ");
+        num2 = teclado.nextDouble();
+
+//Processamento
+        resultado = 0;
+
+//Soma
+        if (operacao == '+') {
+            resultado = num1 + num2;
+        }
+
+//Subtração
+        if (operacao == '-') {
+            resultado = num1 - num2;
+        }
+
+//Multiplicação
+        if (operacao == '*') {
+            resultado = num1 * num2;
+        }
+
+//Divisão
+        if (operacao == '/') {
+        } if (num2 == 0) {
+            //Não é possível fazer a divisão por zero
+            //Informar ao usuário
+           }
+        else {
+            resultado = num1 / num2;
+            
+        }
+
+//Saída de Dados
+       
+          if ((operacao == '/') && (num2 == 0)) {
+              System.out.println("Segundo número = 0, não é possível fazer a divisão");
+          }
+          else {
+        System.out.println("Operação: "+num1+" " +operacao+ " "+num2+" = "+resultado);}
+        }
+    }
